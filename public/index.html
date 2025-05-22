@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vital Go | Video Consultation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Vital Go</div>
+    <nav>
+      <a href="#">Patient Dashboard</a>
+      <a href="#">Assistance</a>
+      <a href="#">Appointments</a>
+      <a href="#">Reports</a>
+      <a href="#">Medical Records</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Video Consultation</h2>
+    <p>Welcome to your secure video consultation</p>
+
+    <div class="video-box">
+      <video id="localVideo" autoplay muted></video>
+      <video id="remoteVideo" autoplay></video>
+    </div>
+
+    <div class="controls">
+      <button id="startCall">Start Consultation</button>
+      <button id="endCall" class="danger">End Call</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Vital Go. All rights reserved.
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
