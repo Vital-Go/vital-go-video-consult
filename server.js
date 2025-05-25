@@ -21,6 +21,17 @@ io.on('connection', socket => {
 
     socket.emit('joined');
   });
+  socket.on('disconnect', () => {
+    for (const room of socket.rooms){
+      if (room != socket.id && roomUsers[room]) {
+        roomUsers[room]--;
+        console.log(`User left ${room} (${roomUsers[room]} remaining)`);
+        if (roomUsers[room] <= 0) {
+          delete roomUsers[room]; // clean up empty rooms
+        }
+      }
+    }
+  });
 
   socket.on('offer', data => {
     socket.to(data.room).emit('offer', data.sdp);
