@@ -1,0 +1,60 @@
+<!-- UPDATED HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vital Go | Video Consultation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Vital Go</div>
+  </header>
+
+  <main>
+    <div class="page-info">
+      <h2>Video Consultation</h2>
+      <p>Welcome to your secure video consultation</p>
+    </div>
+
+    <div class="video-container">
+      <div class="video-wrapper large" id="mainVideoWrapper">
+        <img src="https://i.imgur.com/TefBLyb.jpeg" class="placeholder" id="localPlaceholder" />
+        <video id="localVideo" muted autoplay playsinline class="hidden"></video>
+      </div>
+
+      <div class="video-wrapper small" id="smallVideoWrapper">
+        <img src="https://i.imgur.com/UB6oIB4.jpeg" class="placeholder" id="remotePlaceholder" />
+        <video id="remoteVideo" autoplay playsinline class="hidden"></video>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="startCall" class="control-btn" title="Start Call">
+        <i class="fas fa-phone"></i>
+      </button>
+      <button id="endCall" class="control-btn danger" title="End Call">
+        <i class="fas fa-phone-slash"></i>
+      </button>
+      <button id="muteBtn" class="control-btn" title="Mute/Unmute">
+        <i class="fas fa-microphone"></i>
+      </button>
+      <button id="switchCamera" class="control-btn" title="Switch Camera">
+        <i class="fas fa-camera-rotate"></i>
+      </button>
+      <button id="screenShare" class="control-btn" title="Share Screen">
+        <i class="fas fa-desktop"></i>
+      </button>
+      <button id="pauseVideo" class="control-btn" title="Pause/Resume Video">
+        <i class="fas fa-video"></i>
+      </button>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
